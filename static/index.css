@@ -1,0 +1,155 @@
+/* Estilo para o header semelhante à imagem fornecida */
+body {
+    background-color: #1A1F2B;
+
+    margin: 0;
+}
+
+
+header {
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(26, 31, 43, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 0 32px;
+    height: 48px;
+    gap: 32px;
+    justify-content: left;
+
+
+    &  a {
+    color: #dcd4d4;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0 12px;
+    transition: color 0.2s;
+    &:hover {
+        color: #fff;
+        transition: color 0.2s, transform 0.2s;
+    }
+    /* &:not(:first-child) {
+    color: #bdbdbd;
+    font-weight: 500;
+        } */
+
+    &.active, header a:hover {
+    color: #fff;
+    font-weight: 700;
+        }
+    }
+}
+
+
+
+.header {
+    border-bottom: 2px solid #222;
+    background: #222;
+}
+
+
+.container-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+
+}
+
+.titulo{
+    margin-bottom: 2vh;
+    font-family: "Saira", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: #ffffff;
+    font-size: 2rem;
+    /* margin-bottom: 20px; */
+}
+.container-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video-input{
+    width: 50vh;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
+    border-radius: 50px;
+}
+input{
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+input::placeholder {
+    text-align: left;
+    font-family: "Saira", sans-serif;
+    font-style: italic;
+    font-optical-sizing: auto;
+    color: #aaa;
+    font-size: 0.8rem;
+    padding-left: 0.5vh;
+}
+
+.descricao {
+    color: #aaa;
+    font-family: "Saira", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: -1vh;
+    margin-bottom: 4vh;
+    text-align: center;
+}
+
+
+.botao-enviar-video {
+    background: linear-gradient(90deg, #FF00D9, #005AFF, #00FF25);
+    background-size: 200%;
+    background-position: left;
+    color: rgb(255, 255, 255);
+    padding: 2vh 6vh;
+    border: none;
+    border-radius: 100px;
+    font-weight: normal;
+    font-size: large;
+    font-family: "Saira", sans-serif;
+    cursor: pointer;
+    transition: background-position 2s ease, transform 0.3s ease;
+}
+
+.botao-enviar-video:hover {
+    background-position: right;
+    transform: scale(1.05);
+}
+
+
+.container-grande{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 5vh;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <meta charset="UTF-8">
+  <title>YouTube → MP3</title>
+</head>
+
+<body>
+  <header>
+    <a href="#">Gerar QR code</a>
+    <a href="#">Encurtador de Links</a>
+    <a href="/video">Youtube2Mp4</a>
+  </header>
+
+  <div class="container-principal">
+    <h1 class="titulo">YouTube para MP3</h1>
+    <p class="descricao">Cole o link do YouTube e baixe o áudio em MP3 rapidamente.</p>
+    <div class="container-input">
+      <input class="video-input" type="text" id="url-input" placeholder="Cole o link do vídeo aqui..." required>
+      <button class="botao-enviar-video" id="download-btn">Baixar MP3</button>
+    </div>
+    <div id="loader" style="display:none; color:#fff; margin-top:16px;">Processando...</div>
+  </div>
+
+  <footer>
+    <p>© 2025 - Equipe Swiss</p>
+  </footer>
+
+  <script>
+    const button = document.getElementById('download-btn');
+    const input = document.getElementById('url-input');
+    const loader = document.getElementById('loader');
+
+    button.addEventListener('click', () => {
+      const url = input.value.trim();
+      if (!url) {
+        alert("Por favor, cole um link válido.");
+        return;
+      }
+
+      button.disabled = true;
+      // loader.style.display = 'block';
+      button.textContent = 'Processando...';
+
+      const downloadUrl = `/video/download?url=${encodeURIComponent(url)}`;
+      window.location.href = downloadUrl;
+
+      setTimeout(() => {
+        button.disabled = false;
+        button.textContent = 'Baixar MP3';
+        loader.style.display = 'none';
+      }, 5000); // Apenas para visual feedback temporário
+    });
+  </script>
+</body>
+
+</html>
