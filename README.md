@@ -1,7 +1,6 @@
-# 🚀 Nome do Projeto
+# Canivete suíço 
 
-**Descrição breve do projeto** (opcional)
-
+**Site com múltiplas funcionalidades úteis para o dia a dia** 
 ---
 
 ## 📋 Pré-requisitos
