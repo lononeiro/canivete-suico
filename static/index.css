@@ -138,6 +138,49 @@ input::placeholder {
     transform: scale(1.05);
 }
 
+.botao-encurtar {
+    background: linear-gradient(90deg, #FF00D9, #005AFF, #00FF25);
+    background-size: 200%;
+    background-position: left;
+    color: rgb(255, 255, 255);
+    padding: 2vh 6vh;
+    border: none;
+    border-radius: 100px;
+    font-weight: normal;
+    font-size: large;
+    font-family: "Saira", sans-serif;
+    cursor: pointer;
+    transition: background-position 2s ease, transform 0.3s ease;
+}
+
+.botao-encurtar:hover {
+    background-position: right;
+    transform: scale(1.05);
+}
+
+.input-url {
+    width: 50vh;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
+    border-radius: 50px;
+    border: 1px solid;
+}
+
+.form-url {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultado {
+    font-family: "Saira", sans-serif;
+    color: #ffffff;
+}
+
 
 .container-grande{
     display: flex;
