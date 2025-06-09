@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Gerador de QR Code</title>
+</head>
+<body>
+    <header>
+        <a href="/qrcode">Gerar QR code</a>
+        <a href="/encurtador">Encurtador de Links</a>
+        <a href="/video">Youtube2Mp4</a>
+    </header>
+
+    <div class="container-principal">
+        <h1 class="titulo">Gerador de QR Code</h1>
+        <p class="descricao">Digite uma mensagem: </p>
+        <form class="form-url" action="/qrcode" method="post">
+            <input class="input-url" type="text" id="data" name="data" placeholder="Mensagem..." required>
+            <button class="botao-enviar-video" id="download-btn" type="submit">Gerar QR Code</button>
+        </form>
+    </div>
+
+    <div class="container-principal">
+        {% if img_data %}
+        <h2 class="titulo">QR Code Gerado:</h2>
+        <img class="img-qrcode" src="data:image/png;base64,{{ img_data }}" alt="QR Code">
+        {% endif %}
+
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </div>
+    
+</body>
+</html>
