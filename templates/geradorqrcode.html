@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Gerador de QR Code</title>
 </head>
 <body>
     <header>
         <a href="/qrcode">Gerar QR code</a>
         <a href="/encurtador">Encurtador de Links</a>
-        <a href="/video">Youtube2Mp4</a>
+        <a href="/video">YouTube → MP4</a>
     </header>
 
     <div class="container-principal">
@@ -20,9 +23,6 @@
             <input class="input-url" type="text" id="data" name="data" placeholder="Mensagem..." required>
             <button class="botao-enviar-video" id="download-btn" type="submit">Gerar QR Code</button>
         </form>
-    </div>
-
-    <div class="container-principal">
         {% if img_data %}
         <h2 class="titulo">QR Code Gerado:</h2>
         <img class="img-qrcode" src="data:image/png;base64,{{ img_data }}" alt="QR Code">
@@ -34,4 +34,6 @@
     </div>
     
 </body>
+<footer>
+    <p>© 2025 - Equipe Swiss</p>
 </html>
