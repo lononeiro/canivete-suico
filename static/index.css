@@ -25,7 +25,7 @@ header {
     padding: 0 32px;
     height: 48px;
     gap: 32px;
-    justify-content: left;
+    justify-content: center;
 
 
     &  a {
@@ -65,6 +65,7 @@ header {
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    margin-top: 15vh;
 }
 
 .card {
@@ -120,6 +121,7 @@ header {
     justify-content: center;
     margin: 0 0 1rem 0;
     border-radius: 50px;
+    border: none;
 }
 input{
     font-size: 1rem;
@@ -230,4 +232,14 @@ footer {
     color: #666;
     font-size: 0.9rem;
     margin-top: 5vh;
+}
+
+.site-description p {
+    font-size: 1.25rem;
+    color: lightgray; 
+    line-height: 1.7; 
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10vh;
+    margin-top: 2vh
 }

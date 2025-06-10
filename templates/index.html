@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
+
 <body>
 
     <div class="header">
         <header>
-            <a href="/qrcode" target="_blank">Gerar QR code</a>
-            <a href="/encurtador" target="_blank">Encurtador de Links</a>
-            <a href="/video" target="_blank">YouTube → MP4</a>
+            <a href="/qrcode">Gerar QR code</a>
+            <a href="/encurtador">Encurtador de Links</a>
+            <a href="/video">YouTube → MP4</a>
         </header>
     </div>
 
+    <div class="site-description" style="text-align:center; margin: 30px 0 20px 0;">
+        <p>Bem-vindo ao Canivete Suíço Digital! Este site reúne ferramentas úteis para o seu dia a dia, como gerador de
+            QR Code, encurtador de links e conversor de vídeos do YouTube para MP4. Tudo em um só lugar, de forma
+            simples e rápida.</p>
+    </div>
+
     <div class="container-principal" style="flex-direction: row;">
+
+
+
         <a href="/qrcode" target="_blank" class="card">
             <h2>Gerador QRCODE</h2>
             <img src="../static/imgs/qrcode.png">
@@ -40,4 +53,5 @@
 </body>
 <footer>
     <p>© 2025 - Equipe Swiss</p>
+
 </html>

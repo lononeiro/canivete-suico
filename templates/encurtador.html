@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encurtador de URL</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../static/index.css">
 </head>
+
 <body>
-    <header>
-        <a href="/qrcode">Gerar QR code</a>
-        <a href="/encurtador">Encurtador de Links</a>
-        <a href="/video">YouTube → MP4</a>
-    </header>
+    <div class="header">
+        <header>
+            <a href="/qrcode">Gerar QR code</a>
+            <a href="/encurtador">Encurtador de Links</a>
+            <a href="/video">YouTube → MP4</a>
+        </header>
+    </div>
     <div class="container-principal">
         <h1 class="titulo">Encurtador de URL</h1>
         <p class="descricao">Digite a URL que deseja encurtar: </p>
-        <form class="form-url"  method="POST" action="{{ url_for('encurtador.index') }}">
+        <form class="form-url" method="POST" action="{{ url_for('encurtador.index') }}">
             <input class="input-url" type="url" name="url_longa" placeholder="Digite a URL" required>
             <button class="botao-encurtar" type="submit">Encurtar</button>
         </form>
         {% if url_encurtada %}
-            <div class="resultado">
-                <p>URL encurtada: <a href="{{ url_encurtada }}" target="_blank">{{ url_encurtada }}</a></p>
-            </div>
+        <div class="resultado">
+            <p>URL encurtada: <a href="{{ url_encurtada }}" target="_blank">{{ url_encurtada }}</a></p>
+        </div>
         {% endif %}
     </div>
 </body>
 <footer>
     <p>© 2025 - Equipe Swiss</p>
+
 </html>
